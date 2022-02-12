@@ -1,6 +1,7 @@
 :root{
 	--rosa1: #DC2287;
-	--rosa2: #FFF9FC;
+	/*--rosa2: #FFF9FC;--*/
+	--rosa2: #FDEEF6;
 	--gris1: #263238;
 	--gris2: #455A64;
 	--gris3: #758892;
@@ -10,8 +11,77 @@
 *{
 	font-family: 'Montserrat', sans-serif;
 }
+.sombra{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(104, 14, 69, 0.51);
+	top: 0;
+	z-index: 30;
+	display: none;
+  	transition: all 1s;
+	opacity: 0;
+}
+.visible-som{
+	display: block;
+	transition: all 1s;
+	opacity: 1;
+}
+.menu-movil-icon{
+	display: none;
+	color: var(--rosa1);
+	font-size: 32px;
+}
+.menu{
+	width: 100%;
+	height: auto;
+	padding: 20px 0px;
+	background: var(--rosa2);
+}
+.menu-container{
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+	height: 40px;
+	width: 40px;
+	aspect-ratio: auto;
+}
+.nav-list{
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	display: inline-block;
+	text-align: center;
+	width: fit-content;
+}
+.nav-items{
+	display: flex;
+	text-decoration: none;
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	gap: 48px;
+}
+.nav-items_links{
+	color: var(--rosa1);
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+}
+.nav-items_links:visited{
+	color: var(--rosa1);
+}
+.nav-items_links:hover{
+	border-bottom: 2px solid var(--rosa1);
+	color: var(--rosa1);
+}
 .banner{
-	height: 500px;
+	height: auto;
+	padding: 25px 0px;
 	width: 100%;
 	background: var(--rosa2);
 }
@@ -24,6 +94,11 @@
 	font-weight: 700;
 	line-height: 56px;
 }
+.banner_textos-subtitle{
+	color: var(--rosa1);
+	font-weight: 700;
+	font-size: 48px;
+}
 .banner_textos-title span{
 	font-size: 36px;
 	color: var(--gris1);
@@ -34,6 +109,10 @@
 	color: var(--gris2);
 	line-height: 200%;
 	text-align: left;
+}
+.banner_textos-parrafo.services{
+	font-size: 16px;
+	font-weight: 600;
 }
 .btn-llamar{
 	background: var(--cyan1);
@@ -89,7 +168,7 @@
 }
 .banner_image img{
 	/*width: 606px;*/
-	aspect-ratio: 16/9;
+	aspect-ratio: auto;
 }
 
 
@@ -122,6 +201,26 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 80px;
+	text-decoration: none;
+}
+.servicios_container-card.disable{
+	background: #c6c3c3;
+	border: 2px solid #a2a2a2;
+	color: #999;
+	cursor: no-drop;
+}
+.servicios_container-card:visited{
+	color: var(--rosa1);
+}
+.servicios_container-card:hover{
+	background: var(--rosa1);
+	color: var(--rosa2);
+}
+.servicios_container-card.disable:hover{
+	background: #c6c3c3;
+	border: 2px solid #a2a2a2;
+	color: #999;
+	cursor: no-drop;
 }
 .servicios_container-card i{
 	font-size: 24px;
@@ -240,6 +339,106 @@ footer a:hover{
 
 
 
+/*---------------------------- page services ------------------*/
+.pady{
+	padding: 90px 0px;
+}
+.img-service{
+	height: 64px;
+	width: 64px;
+	aspect-ratio: auto;
+	margin-bottom: 20px;
+}
+.service-item{
+	padding-bottom: 150px;
+}
+.service-title{
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--gris1);
+	text-transform: uppercase;
+}
+.service-parrafo, .service-span{
+	font-size: 16px;
+	line-height: 200%;
+	color: var(--gris2);
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.links-contacts{
+	text-decoration: none;
+	list-style: none;
+	padding: 0px;
+}
+.link-item{
+	color: var(--rosa1);
+	display: flex;
+	align-items: center;
+}
+.link-item i{
+	font-size: 28px;
+	font-weight: 700;
+}
+.link-w{
+	text-decoration: none;
+	color: inherit;
+	font-size: 14px;
+	font-weight: 600;
+	margin-left: 10px;
+}
+.link-w:visited{
+	color: var(--rosa1);
+}
+.link-w:hover{
+	color: var(--cyan1);
+}
+.boton-agendar{
+	color:var(--cyan1);
+	font-size: 14px;
+	font-weight: 600;
+	padding: 5px 15px;
+	border-radius: 10px;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	margin-top: 10px;
+	border: 2px solid var(--cyan1);
+	transition: all 0.4s;
+}
+.boton-agendar:hover{
+	background: var(--cyan1);
+	color: #ffffff;
+}
+
+
+
+.cards-container{
+	padding: 30px 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+}
+
+.card-item{
+	background: var(--rosa2);
+	padding: 25px;
+}
+.card-item_title{
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--gris1);
+}
+.card-item_description{
+	font-size: 14px;
+	line-height: 180%;
+	color: var(--gris2);
+	font-weight: 400;
+}
+
+
+
 
 
 
@@ -288,10 +487,64 @@ footer a:hover{
 }
 
 @media screen and (max-width: 767px){
+	/*-- menu movil icon ---*/
+	.logo{
+		height: 30px;
+		width: 30px;
+	}
+	.menu-movil-icon{
+		display: block;
+	}
+	.menu{
+		position: fixed;
+		top: 0;
+		z-index: 50;
+		padding: 5px 0px;
+	}
+	.nav-list{
+		position: fixed;
+		bottom: -100%;
+		width: 90vw;
+		background: var(--rosa1);
+		padding: 25px;
+		z-index: 100;
+		border-radius: 15px;
+		max-height: 80vh;
+		transition: all 0.6s;
+	}
+	.nav-items{
+		flex-direction: column;
+		gap: 10px;
+	}
+	.nav-items_links{
+		color: var(--rosa2);
+		display: block;
+		padding: 15px 0px;
+	}
+	.nav-items_links:visited{
+		color: var(--rosa2);
+	}
+	.nav-items_links:hover{
+		color: var(--rosa2);
+		border: 0px;
+	}
+	.nav-items_links:active{
+		background: #A81766;
+	}
+	
+	.visible{
+		bottom: 10px;
+		transition: all 0.6s;
+	}
+	
+	
+	
+	
+	
 	/*--- banner ---*/
 	.banner{
 		height: auto;
-		padding: 10px 0px 50px;
+		padding: 68px 0px 50px;
 	}
 	.banner_textos{
 		text-align: center;
@@ -302,6 +555,9 @@ footer a:hover{
 	}
 	.banner_image img{
 		width: 400px;
+	}
+	.banner_image.img-banner_service img{
+		width: 250px;
 	}
 
 	/* ---- servicios ---*/
@@ -324,13 +580,23 @@ footer a:hover{
 	.social_images{
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
+	
+	
+	
+	/*   ----- page services ----*/
+	.banner_textos-parrafo.services{
+		text-align: center;
+	}
+	.cards-container{
+		grid-template-columns: 1fr;
+	}
 }
 
 @media screen and (max-width: 575px){
 	.banner_image img{
 		width: 300px;
 	}
-	.banner_textos-title{
+	.banner_textos-title, .banner_textos-subtitle{
 		font-size: 36px;
 	}
 	.banner_textos-title span{
@@ -370,6 +636,20 @@ footer a:hover{
 	}
     	.social_images-item {
 	    width: 80px;
+	}
+	
+	/* -----page services ----*/
+	.banner_image.img-banner_service img{
+		width: 200px;
+	}
+	.service-title{
+		font-size: 18px;
+	}
+	.service-parrafo, .service-span, .banner_textos-parrafo.services{
+		font-size: 14px;
+	}
+	.card-item_title{
+		font-size: 16px;
 	}
 
 
