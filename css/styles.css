@@ -72,7 +72,7 @@
 .logo{
 	height: 40px;
 	width: 40px;
-	aspect-ratio: auto;
+	aspect-ratio: 1/1;
 }
 .nav-list{
 	position: absolute;
@@ -193,9 +193,16 @@
 }
 .banner_image img{
 	/*width: 606px;*/
-	aspect-ratio: auto;
+	
 }
 
+
+.aspect-19{
+	aspect-ratio: 16/9;
+}
+.aspect-1{
+	aspect-ratio: 1/1;
+}
 
 
 /* ---------  servicios ----------*/
