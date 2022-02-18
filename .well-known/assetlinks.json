@@ -1,6 +1,6 @@
 [{
         "relation": ["delegate_permission/common.handle_all_urls"],
         "target" : { "namespace": "android_app", "package_name": "app.netlify.difdoctormora.twa",
-                     "sha256_cert_fingerprints": ["28:E1:8B:C5:C4:47:8A:81:2F:2F:B8:5C:1D:24:B2:33:83:00:6B:3B:55:25:68:62:C6:B4:F9:71:BE:FF:18:1A"] }
+                     "sha256_cert_fingerprints": ["6E:BF:6C:AC:3C:A9:2D:0B:1A:1B:F1:C6:EB:62:1E:05:21:B2:65:B2:9A:67:43:B5:F9:D9:F3:5C:EA:69:B3:96"] }
       }
 ]
