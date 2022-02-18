@@ -193,7 +193,7 @@
 }
 .banner_image img{
 	/*width: 606px;*/
-	aspect-ratio: 1/1;
+	aspect-ratio: auto;
 }
 
 
