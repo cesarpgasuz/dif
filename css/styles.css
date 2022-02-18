@@ -1,3 +1,28 @@
+@font-face{
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Regular.woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-SemiBold.woff2");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Montserrat';
+	src: url("../fonts/Montserrat-Bold.woff2");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+
+
+
 :root{
 	--rosa1: #DC2287;
 	/*--rosa2: #FFF9FC;--*/
