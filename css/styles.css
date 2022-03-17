@@ -473,10 +473,84 @@ footer a:hover{
 }
 
 
+/* ----- page programas ------*/
+.programas-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 30px;
+}
 
+.programas-card{
+	border: 2px solid var(--rosa1);
+	padding: 25px 25px 100px;
+	border-radius: 5px;
+	position: relative;
+}
+.programas-card img{
+	aspect-ratio: auto;
+}
+.programas-card_title{
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--rosa1);
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.programas-card_subtitle{
+	font-size: 14px;
+	color: var(--gris3);
+	line-height: 180%;
+	font-weight: 400;
+}
+.programas-card_button{
+	position: absolute;
+	display: block;
+	background: var(--rosa1);
+	color: var(--rosa2);
+	width: 90%;
+	margin: 0 auto;
+	bottom: 25px;
+	right: 0;
+	left: 0;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 0;
+	text-align: center;
+	cursor: pointer;
+}
+.programas-card_button:active{
+	transform: scale(.95);
+}
 
-
-
+.modal-header.programas{
+	background: var(--rosa1);
+	color: var(--rosa2);
+}
+.modal-title.programas{
+	font-weight: 700;
+}
+.modal-body.programas p{
+	font-size: 16px;
+	color: var(--gris1);
+	line-height: 28px;
+	margin-bottom: 25px;
+}
+.modal-body.programas ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: var(--gris1);
+}
+.modal-body.programas ul li:not(.item){
+	list-style: disc;
+	margin-left: 15px;
+}
+.modal-body.programas ul li h5{
+	font-weight: 700;
+	margin-top: 15px;
+}
 
 /* ---------------------------------------- responsive ----------------------------*/
 
@@ -518,6 +592,12 @@ footer a:hover{
 	.social_images{
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+	
+	
+	/* ----- page programas ---*/
+	.programas-container{
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -622,9 +702,19 @@ footer a:hover{
 	.banner_textos-parrafo.services{
 		text-align: center;
 	}
-	.cards-container{
+	.cards-container, .programas-container{
 		grid-template-columns: 1fr;
 	}
+	
+	.programas-card{
+		padding-bottom: 25px;
+	}
+	.programas-card_button{
+		position: relative;
+		bottom: 0;
+	}
+	
+	
 }
 
 @media screen and (max-width: 575px){
@@ -687,7 +777,35 @@ footer a:hover{
 		font-size: 16px;
 	}
 
+	/* ---page programas ---*/
+	.programas-card img{
+		width: 40px;
+		height: 40px;
+	}
+	.programas-card_title{
+		font-size: 16px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.programas-card_subtitle {
+		font-size: 12px;
+	}
+	.programas-card_button{
+		font-size: 14px;
+	}
+	
+	
+	
+	
+	.modal-body.programas p, .modal-body.programas ul{
+		font-size: 14px;
+	}
+	.modal-body.programas ul li h5{
+		font-size: 16px;
+	}
 
+	
+	
 }
 
 
