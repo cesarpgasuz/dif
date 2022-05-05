@@ -518,9 +518,12 @@ footer a:hover{
 	border: 0;
 	text-align: center;
 	cursor: pointer;
+	transition: all 0.3s;
+	box-shadow: 0 8px 0 #ea7ab7;
 }
 .programas-card_button:active{
-	transform: scale(.95);
+	transform: translateY(4px);
+	box-shadow: 0 4px 0 #ea7ab7;
 }
 
 .modal-header.programas{
